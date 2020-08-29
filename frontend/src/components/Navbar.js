@@ -9,9 +9,9 @@ const Navbar = () => {
     return (
         <Wrapper>
             <Span>About</Span>
-            <Span>Skills</Span>
-            <Logo src={logo} alt="logo" />
             <Span>Portfolio</Span>
+            <Logo src={logo} alt="logo" />
+            <Span>Contact</Span>
             <Social>
                 <Anchor href="https://github.com/vitor-correia10" target="_blank">
                     <FiGithub />

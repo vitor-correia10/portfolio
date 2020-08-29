@@ -18,6 +18,7 @@ const Wrapper = styled.div`
     width: 100%;
     position: sticky;
     top: 0;
+    z-index: 10;
 `
 
 const Head = styled.h1`

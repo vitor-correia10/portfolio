@@ -20,18 +20,24 @@ const About = () => {
 }
 
 const Wrapper = styled.div`
+    margin: 30px 0;
 `
 const Header = styled.h2`
     border-left: solid 5px #F1BB87;
     padding-left: 5px;
-    font-size: 22px;
+    font-size: 24px;
 `
+
 const Container = styled.div`
     display: flex;
     padding: 40px;
 `
+
 const Logo = styled.img`
     height: 120px;
+    transform: rotate(335deg);
+    border: 13px solid black;
+    box-sizing: content-box;
 `
 
 const Text = styled.div`
