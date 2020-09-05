@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
+import { THEME } from '../components/GlobalStyle/Theme';
+
 const Contact = () => {
     return (
         <Wrapper id="contact">
@@ -21,7 +23,7 @@ const Wrapper = styled.div`
 `
 
 const Header = styled.h2`
-    border-left: solid 5px #F1BB87;
+    border-left: solid 5px ${THEME.secondary};
     padding-left: 5px;
     font-size: 24px;
 `
@@ -36,7 +38,7 @@ const Paragraph = styled.p`
 
 const Anchor = styled.a`
     padding-bottom: 2px;
-    border-bottom: 3px solid #07da63;
+    border-bottom: 3px solid ${THEME.primary};
     transition: border-bottom 300ms ease-out;
 
     &:hover {

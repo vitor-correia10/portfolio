@@ -19,9 +19,4 @@ const Wrapper = styled.div`
     z-index: 10;
 `
 
-const Head = styled.h1`
-    font-size: 28px;
-    margin: 20px auto;
-`
-
 export default Header;

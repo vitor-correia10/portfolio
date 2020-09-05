@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import { THEME } from '../components/GlobalStyle/Theme';
 
 import picture from '../assets/picture.jpeg';
 
@@ -23,7 +24,7 @@ const Wrapper = styled.div`
     margin: 30px 0;
 `
 const Header = styled.h2`
-    border-left: solid 5px #F1BB87;
+    border-left: solid 5px ${THEME.secondary};
     padding-left: 5px;
     font-size: 24px;
 `

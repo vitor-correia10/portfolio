@@ -19,6 +19,7 @@ const Logo = ({ size, space }) => {
 
 const Anchor = styled.a`
   text-decoration: none;
+  cursor: pointer;
 `;
 
 export default Logo;

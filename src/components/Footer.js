@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import { THEME } from '../components/GlobalStyle/Theme';
 
 import Logo from './Logo'
 
@@ -30,8 +31,6 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-
 `
 
 const Anchor = styled.a`
@@ -39,7 +38,7 @@ const Anchor = styled.a`
     cursor: pointer;
 
     &:hover{
-        color: #F1BB87;
+        color: ${THEME.secondary};
     }
 `
 

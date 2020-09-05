@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import { THEME } from '../components/GlobalStyle/Theme';
 
 const Skills = () => {
     return (
@@ -39,7 +40,7 @@ const Wrapper = styled.div`
 `
 
 const Header = styled.h2`
-    border-left: solid 5px #F1BB87;
+    border-left: solid 5px ${THEME.secondary};
     padding-left: 5px;
     font-size: 24px;
 `
@@ -71,7 +72,7 @@ const List = styled.li`
 
     :before{
         content: "+";
-        color: #07da63;
+        color: ${THEME.primary};
         padding-right: 5px;
     }
 `

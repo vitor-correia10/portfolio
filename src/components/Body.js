@@ -3,6 +3,7 @@ import styled from 'styled-components/macro';
 
 import About from './About';
 import Skills from './Skills';
+import Portfolio from './Portfolio';
 import Contact from './Contact';
 
 const Body = () => {
@@ -10,6 +11,7 @@ const Body = () => {
         <Wrapper>
             <About />
             <Skills />
+            <Portfolio />
             <Contact />
         </Wrapper>
     )
