@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import logo from '../assets/vitorCorreia.png';
-
 import Navbar from './Navbar';
 
 const Header = () => {

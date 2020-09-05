@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import logo from '../assets/vitorCorreia.png';
+import picture from '../assets/picture.jpeg';
 
 const About = () => {
     return (
-        <Wrapper>
+        <Wrapper id="about">
             <Header>Nice to meet you!</Header>
             <Container>
-                <Logo src={logo} alt="logo" />
+                <Logo src={picture} alt="Vitor Correia Picture" />
                 <Text>
                     Lorem ipsum dolor sit amet, pro purto praesent in, sit te veri fabulas intellegebat. Id nulla persius per, ius ut nulla vocent. Cu graece dolores his, aeque vivendum pericula mei ut, pri nemore nusquam eu. Usu id primis honestatis. Ius an noster civibus reprehendunt. Quot postulant eum te, euismod urbanitas neglegentur no nec.
 
@@ -35,14 +35,18 @@ const Container = styled.div`
 
 const Logo = styled.img`
     height: 120px;
-    transform: rotate(335deg);
-    border: 13px solid black;
+    transform: rotate(340deg);
+    border: 12px double black;
     box-sizing: content-box;
 `
 
 const Text = styled.div`
-    width: 80%;
+    width: 65%;
     margin: auto;
+
+    @media (min-width: 1024px){
+        width: 70%;
+    }
 `
 
 export default About;

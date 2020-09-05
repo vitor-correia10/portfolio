@@ -1,17 +1,27 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import { Link } from 'react-scroll';
 
 import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi'
 
-import logo from '../assets/vitorCorreia.png';
+import Logo from './Logo';
 
 const Navbar = () => {
     return (
         <Wrapper>
-            <Span>About</Span>
-            <Span>Portfolio</Span>
-            <Logo src={logo} alt="logo" />
-            <Span>Contact</Span>
+            <Link to="about" smooth={true} duration={1000} offset={-70}>
+                <Span>About</Span>
+            </Link>
+            <Link to="portfolio" smooth={true} duration={1000}>
+                <Span>Portfolio</Span>
+            </Link>
+            <Logo
+                size={120}
+                space={55}
+            />
+            <Link to="contact" smooth={true} duration={1000}>
+                <Span>Contact</Span>
+            </Link>
             <Social>
                 <Anchor href="https://github.com/vitor-correia10" target="_blank">
                     <FiGithub />
@@ -23,7 +33,7 @@ const Navbar = () => {
                     <FiTwitter />
                 </Anchor>
             </Social>
-        </Wrapper>
+        </Wrapper >
     )
 }
 
@@ -40,28 +50,44 @@ const Span = styled.span`
     padding: 10px 2em;
     color: #ffffff;
     font-weight: 600;
-    border-bottom: 2px solid transparent;
+    margin: 0;
+    margin-left: 1px;
+    position: relative;
+    cursor: pointer;
 
-    &:hover{
-        color: black;
-        border-bottom: 2px solid black;
-        cursor: pointer;
+    &:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 0; 
+        height: 4px;
+        display: block;
+        margin-top: 10px;
+        background: #000000;
+        transition: width 500ms ease-out;
+    }
+
+    &:hover:after{
+        text-align: center;
+        width: 100%;
+        left: 0;
+        background: #000000;
     }
 `
 
-const Logo = styled.img`
-    height: 120px;
-    margin-top: 55px;
-`
-
 const Social = styled.div`
-    padding: 10px 2em;
+    padding: 10px 1.8em;
 
 `
 
 const Anchor = styled.a`
     padding: 5px;
     font-size: 18px;
+
+
+    &:hover{
+        color: #ffffff;
+    }
 `
 
 export default Navbar;
