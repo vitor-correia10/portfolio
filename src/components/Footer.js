@@ -27,7 +27,7 @@ const Footer = () => {
 }
 
 const Wrapper = styled.div`
-    margin: 60px 30px;
+    margin: 60px 30px 30px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;

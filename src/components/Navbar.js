@@ -8,17 +8,28 @@ import { THEME } from '../components/GlobalStyle/Theme';
 import Logo from './Logo';
 
 const Navbar = () => {
+    const [logoSize, setLogoSize] = React.useState(false);
+
+    const changeLogoSize = () => {
+        if (window.scrollY > 30) {
+            setLogoSize(true);
+        } else {
+            setLogoSize(false);
+        }
+    };
+    window.addEventListener('scroll', changeLogoSize);
+
     return (
         <Wrapper>
-            <Link to="about" smooth={true} duration={1000} offset={-70}>
+            <Link to="about" smooth={true} duration={1000} offset={-10}>
                 <Span>About</Span>
             </Link>
             <Link to="portfolio" smooth={true} duration={1000} offset={-70}>
                 <Span>Portfolio</Span>
             </Link>
             <Logo
-                size={120}
-                space={55}
+                size={logoSize ? 60 : 120}
+                space={logoSize ? 5 : 55}
             />
             <Link to="contact" smooth={true} duration={1000}>
                 <Span>Contact</Span>

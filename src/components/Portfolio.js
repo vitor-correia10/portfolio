@@ -5,7 +5,6 @@ import { projects } from '../data';
 import ListingGrid from './ListingGrid';
 
 const Portfolio = () => {
-    console.log(projects);
     return (
         <Wrapper id="portfolio">
             <Header>My work...</Header>

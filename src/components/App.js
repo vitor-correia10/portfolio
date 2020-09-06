@@ -1,22 +1,36 @@
 import React from 'react';
-import styled from 'styled-components/macro';
 import GlobalStyles from './GlobalStyle/GlobalStyles';
 
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from 'react-router-dom';
+
+import Home from './Home';
+import ProjectList from './ProjectList';
+
 import Header from './Header';
-import Body from './Body';
 import Footer from './Footer';
+
 
 function App() {
     return (
-        <Wrapper>
+        <Router>
             <Header />
-            <Body />
+            <Switch>
+                <Route exact path="/">
+                    <Home />
+                </Route>
+                <Route path="/:id">
+                    <ProjectList />
+                </Route>
+            </Switch>
             <Footer />
             <GlobalStyles />
-        </Wrapper>
+        </Router>
     )
 }
 
-const Wrapper = styled.div`
-`
+
 export default App;

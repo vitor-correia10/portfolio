@@ -29,15 +29,18 @@ const Header = styled.h2`
 `
 
 const Subtitle = styled.h6`
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
 `
 
 const Paragraph = styled.p`
     margin-bottom: 40px;
+    margin-left: 40px;
 `
 
 const Anchor = styled.a`
     padding-bottom: 2px;
+    margin-left: 40px;
     border-bottom: 3px solid ${THEME.primary};
     transition: border-bottom 300ms ease-out;
 

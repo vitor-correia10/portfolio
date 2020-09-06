@@ -6,7 +6,7 @@ import Skills from './Skills';
 import Portfolio from './Portfolio';
 import Contact from './Contact';
 
-const Body = () => {
+const Home = () => {
     return (
         <Wrapper>
             <About />
@@ -18,7 +18,7 @@ const Body = () => {
 }
 
 const Wrapper = styled.div`
-    margin: 60px 30px
+    margin: 0 30px
 `
 
-export default Body;
+export default Home;

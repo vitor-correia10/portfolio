@@ -7,9 +7,10 @@ import picture from '../assets/picture.jpeg';
 const About = () => {
     return (
         <Wrapper id="about">
+            <Header1>Hello! I am Vitor, <Gold>a Web Developer </Gold>& Bootcamp Student. </Header1>
             <Header>Nice to meet you!</Header>
             <Container>
-                <Logo src={picture} alt="Vitor Correia Picture" />
+                <Picture src={picture} alt="Vitor Correia Picture" />
                 <Text>
                     Lorem ipsum dolor sit amet, pro purto praesent in, sit te veri fabulas intellegebat. Id nulla persius per, ius ut nulla vocent. Cu graece dolores his, aeque vivendum pericula mei ut, pri nemore nusquam eu. Usu id primis honestatis. Ius an noster civibus reprehendunt. Quot postulant eum te, euismod urbanitas neglegentur no nec.
 
@@ -21,8 +22,20 @@ const About = () => {
 }
 
 const Wrapper = styled.div`
-    margin: 30px 0;
+    margin: 90px 0 40px 0;
 `
+
+const Header1 = styled.h1`
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 50px;
+`
+
+const Gold = styled.span`
+    color: ${THEME.secondary}
+`
+
 const Header = styled.h2`
     border-left: solid 5px ${THEME.secondary};
     padding-left: 5px;
@@ -34,15 +47,19 @@ const Container = styled.div`
     padding: 40px;
 `
 
-const Logo = styled.img`
+const Picture = styled.img`
     height: 120px;
     transform: rotate(340deg);
     border: 12px double black;
     box-sizing: content-box;
+
+    @media (min-width: 1024px){
+        height: 140px;
+    }
 `
 
 const Text = styled.div`
-    width: 65%;
+    width: 60%;
     margin: auto;
 
     @media (min-width: 1024px){
