@@ -2,13 +2,18 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { Link } from 'react-scroll';
 
-import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiTwitter, FiX, FiMenu } from 'react-icons/fi'
 import { THEME } from '../components/GlobalStyle/Theme';
 
 import Logo from './Logo';
 
 const Navbar = () => {
     const [logoSize, setLogoSize] = React.useState(false);
+    const [click, setClick] = React.useState(false);
+
+    const handleClick = () => {
+        setClick(!click);
+    }
 
     const changeLogoSize = () => {
         if (window.scrollY > 30) {
@@ -21,6 +26,9 @@ const Navbar = () => {
 
     return (
         <Wrapper>
+            <Hamburger onClick={handleClick}>
+                {click ? <FiX /> : <FiMenu />}
+            </Hamburger>
             <Link to="about" smooth={true} duration={1000} offset={-10}>
                 <Span>About</Span>
             </Link>
@@ -56,6 +64,12 @@ const Wrapper = styled.div`
     align-items: center;
     height: 60px;
     justify-content: center;
+`
+
+const Hamburger = styled.div`
+    @media (min-width: ${THEME.mobile}){
+        display: none;
+    }
 `
 
 const Span = styled.span`

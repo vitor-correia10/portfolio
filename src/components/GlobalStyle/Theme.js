@@ -3,5 +3,5 @@ export const THEME = {
     secondary: '#ed7f15',
     dark: '#000000',
     light: '#ffffff',
-    mobile: '576px',
+    mobile: '649px',
 }

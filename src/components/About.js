@@ -7,7 +7,7 @@ import picture from '../assets/picture.jpeg';
 const About = () => {
     return (
         <Wrapper id="about">
-            <Header1>Hello! I am Vitor, <Gold>a Web Developer </Gold>& Bootcamp Student. </Header1>
+            <Header1>Hello! I am Vitor, <Gold>a Web Developer </Gold>& Bootcamp Graduate. </Header1>
             <Header>Nice to meet you!</Header>
             <Container>
                 <Picture src={picture} alt="Vitor Correia Picture" />
