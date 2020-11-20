@@ -2,15 +2,17 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { THEME } from '../components/GlobalStyle/Theme';
 
-import Logo from './Logo'
-
+import Logo from './Head/Logo';
+import { animateScroll as scroll } from "react-scroll";
 
 const Footer = () => {
     return (
         <Wrapper id="footer">
-            <Logo
-                size={80}
-            />
+            <LogoAnchor onClick={() => scroll.scrollToTop()}>
+                <Logo
+                    size={80}
+                />
+            </LogoAnchor>
             <div>
                 <Anchor href="https://github.com/vitor-correia10" target="_blank">
                     github
@@ -32,6 +34,11 @@ const Wrapper = styled.div`
     justify-content: space-between;
     align-items: center;
 `
+
+const LogoAnchor = styled.a`
+    text-decoration: none;
+    cursor: pointer;
+`;
 
 const Anchor = styled.a`
     margin: 5px;

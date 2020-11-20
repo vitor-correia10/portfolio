@@ -63,11 +63,11 @@ const Image = styled.img`
     min-width: 250px;
     width: 80%;
     border-radius: 15px;
-    transition: all 1s ease-in-out;
-    border: 2px solid #ed7f15;
+    transition: all 1s ease-in;
 
     &:hover{
-        transform: scale(1.1);
+        transform: scale(1.05);
+        border: 2px solid #ed7f15;
     }
 `
 

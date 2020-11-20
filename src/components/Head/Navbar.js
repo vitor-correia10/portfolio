@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 import { Link } from 'react-scroll';
 
 import { FiGithub, FiLinkedin, FiTwitter, FiX, FiMenu } from 'react-icons/fi'
-import { THEME } from '../components/GlobalStyle/Theme';
+import { THEME } from '../GlobalStyle/Theme';
 
 import Logo from './Logo';
 
@@ -35,10 +35,12 @@ const Navbar = () => {
             <Link to="portfolio" smooth={true} duration={1000} offset={-70}>
                 <Span>Portfolio</Span>
             </Link>
-            <Logo
-                size={logoSize ? 60 : 120}
-                space={logoSize ? 5 : 55}
-            />
+            <LogoAnchor href="/">
+                <Logo
+                    size={logoSize ? 60 : 120}
+                    space={logoSize ? 5 : 55}
+                />
+            </LogoAnchor>
             <Link to="contact" smooth={true} duration={1000}>
                 <Span>Contact</Span>
             </Link>
@@ -71,6 +73,11 @@ const Hamburger = styled.div`
         display: none;
     }
 `
+
+const LogoAnchor = styled.a`
+    text-decoration: none;
+    cursor: pointer;
+`;
 
 const Span = styled.span`
     padding: 10px 2em;
