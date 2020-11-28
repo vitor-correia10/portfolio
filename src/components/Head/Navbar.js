@@ -2,10 +2,12 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { Link } from 'react-scroll';
 
-import { FiGithub, FiLinkedin, FiTwitter, FiX, FiMenu } from 'react-icons/fi'
+
+import { FiX, FiMenu } from 'react-icons/fi'
 import { THEME } from '../GlobalStyle/Theme';
 
 import Logo from './Logo';
+import SocialMedia from './SocialMedia';
 
 const Navbar = () => {
     const [logoSize, setLogoSize] = React.useState(false);
@@ -44,17 +46,7 @@ const Navbar = () => {
             <Link to="contact" smooth={true} duration={1000}>
                 <Span>Contact</Span>
             </Link>
-            <Social>
-                <Anchor href="https://github.com/vitor-correia10" target="_blank">
-                    <FiGithub />
-                </Anchor>
-                <Anchor href="https://www.linkedin.com/in/vitor-correia" target="_blank">
-                    <FiLinkedin />
-                </Anchor>
-                <Anchor href="https://twitter.com/correia10_vitor" target="_blank">
-                    <FiTwitter />
-                </Anchor>
-            </Social>
+            <SocialMedia />
         </Wrapper >
     )
 }
@@ -80,13 +72,18 @@ const LogoAnchor = styled.a`
 `;
 
 const Span = styled.span`
-    padding: 10px 2em;
-    color: ${THEME.light};
-    font-weight: 600;
-    margin: 0;
-    margin-left: 1px;
-    position: relative;
-    cursor: pointer;
+    display: none;
+
+    @media (min-width: ${THEME.mobile}) {
+        padding: 10px 2em;
+        color: ${THEME.light};
+        font-weight: 600;
+        margin: 0;
+        margin-left: 1px;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+    }
 
     &:after{
         content: '';
@@ -105,21 +102,6 @@ const Span = styled.span`
         width: 100%;
         left: 0;
         background: ${THEME.dark};
-    }
-`
-
-const Social = styled.div`
-    padding: 10px 1.8em;
-
-`
-
-const Anchor = styled.a`
-    padding: 5px;
-    font-size: 18px;
-
-
-    &:hover{
-        color: ${THEME.light};
     }
 `
 

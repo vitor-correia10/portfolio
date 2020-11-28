@@ -26,10 +26,13 @@ const Wrapper = styled.div`
 `
 
 const Header1 = styled.h1`
-    font-size: 28px;
-    text-align: center;
-    margin-bottom: 50px;
-    padding: 0 50px;
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 50px;
+
+    @media (min-width: ${THEME.mobile}){
+        padding: 0 50px;
+    }
 `
 
 const Gold = styled.span`
@@ -43,15 +46,25 @@ const Header = styled.h2`
 `
 
 const Container = styled.div`
-    display: flex;
-    padding: 40px;
+    display: block;
+    text-align: center;
+
+    @media (min-width: ${THEME.mobile}){
+        display: flex;
+        padding: 40px;
+    }
 `
 
 const Picture = styled.img`
-    height: 120px;
-    transform: rotate(340deg);
-    border: 12px double black;
-    box-sizing: content-box;
+        border: 12px double black;
+        box-sizing: content-box;
+        height: 140px;
+        margin: 30px 0;
+
+    @media (min-width: ${THEME.mobile}){
+        height: 120px;
+        transform: rotate(340deg);
+    }
 
     @media (min-width: 1024px){
         height: 140px;
@@ -59,8 +72,12 @@ const Picture = styled.img`
 `
 
 const Text = styled.div`
-    width: 60%;
+    width: 90%;
     margin: auto;
+
+    @media (min-width: ${THEME.mobile}){
+        width: 60%;
+    }
 
     @media (min-width: 1024px){
         width: 70%;

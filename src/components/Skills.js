@@ -15,17 +15,16 @@ const Skills = () => {
                 <StyledList>
                     <Row>
                         <List>HTML & CSS</List>
-                        <List>Javascript ES6</List>
+                        <List>SASS</List>
+                        <List>Javascript</List>
                     </Row>
                     <Row>
                         <List>React</List>
-                        <List>Node</List>
-                    </Row>
-                    <Row>
-                        <List>SASS</List>
+                        <List>Redux</List>
                         <List>Styled-Components</List>
                     </Row>
                     <Row>
+                        <List>Node</List>
                         <List>SQL</List>
                         <List>Git</List>
                     </Row>
@@ -48,18 +47,26 @@ const Header = styled.h2`
 const Container = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 40px;
+
+    @media (min-width: ${THEME.mobile}){
+        padding: 40px;
+    }
 `
 
 const Text = styled.div`
-    width: 60%;
+    width: 90%;
     display: block;
-    margin-bottom: 20px;
+    margin: 20px auto;
+    text-align: center;
+
+    @media (min-width: ${THEME.mobile}){
+        width: 60%;
+    }
 `
 
 const StyledList = styled.ul`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     font-weight: 600;
     list-style: none;
 `
