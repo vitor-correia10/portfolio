@@ -64,7 +64,7 @@ const Hamburger = styled.div`
     position: absolute;
     left: 10px;
     padding: 20px;
-    
+
     @media (min-width: ${THEME.mobile}){
         display: none;
     }
@@ -80,7 +80,7 @@ const Span = styled.span`
     font-size: 18px;
 
     @media (min-width: ${THEME.mobile}) {
-        padding: 10px 2em;
+        padding: 10px 1.5em;
         color: ${THEME.light};
         font-weight: 600;
         margin: 0;

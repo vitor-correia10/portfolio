@@ -12,9 +12,7 @@ const About = () => {
             <Container>
                 <Picture src={picture} alt="Vitor Correia Picture" />
                 <Text>
-                    Lorem ipsum dolor sit amet, pro purto praesent in, sit te veri fabulas intellegebat. Id nulla persius per, ius ut nulla vocent. Cu graece dolores his, aeque vivendum pericula mei ut, pri nemore nusquam eu. Usu id primis honestatis. Ius an noster civibus reprehendunt. Quot postulant eum te, euismod urbanitas neglegentur no nec.
-
-                    Atqui lucilius consulatu ut eos, id scripta dissentiet cum. No populo quidam corpora eum, eu eleifend conceptam intellegebat cum. Ius diceret percipitur disputando ea, sit ad veniam eruditi, ex choro congue soleat mel. Mei dolor tantas partiendo ei, te diam tamquam quo. Ei eum graeci everti repudiandae.
+                    My name is Vitor Correia. I have been started working at at Retrigo 4 years ago as an Operations Director, where I could work close to developers and discover my passion for technology. I decided to take some web development courses, then I joined a bootcamp at Concordia. My final project was an app to connect startups to junior developers. My idea is to help developers to continue honing their skills and small companies making their first app. Since I have previous experience with startups, I know how difficult is to start a business. When I moved to Tailbase 2 years ago, as an e-commerce company, I knew a could have more opportunities to keep learning and improve my technology skills. I have been working at Tailbase for 2 years and +1 year as a web developer. In that time, I have already been promoted 2 times.
                 </Text>
             </Container>
         </Wrapper>

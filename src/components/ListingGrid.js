@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
+import { animateScroll as scroll } from "react-scroll";
 import { Link } from 'react-router-dom';
 import { THEME } from './GlobalStyle/Theme';
 
@@ -10,7 +11,10 @@ const ListingGrid = ({ itemList }) => {
             <Container>
                 {itemList.map((item) => (
                     <ItemDetails key={item.id}>
-                        <Link to={`${item.id}`}>
+                        <Link
+                            to={`${item.id}`}
+                            onClick={() => scroll.scrollToTop()}
+                        >
                             <Image
                                 src={item.avatarSrc}
                                 alt={item.title}
@@ -27,8 +31,6 @@ const ListingGrid = ({ itemList }) => {
 };
 
 const Container = styled.div`
-    margin: 40px 0;
-
     @media (min-width: ${THEME.mobile}){
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -61,6 +63,7 @@ const ItemDetails = styled.div`
     margin: 10px;
     box-shadow: 3px 5px 15px #888888;
     height: 560px;
+    margin: 30px 0;
 
     @media (min-width: ${THEME.mobile}){
         height: auto;
