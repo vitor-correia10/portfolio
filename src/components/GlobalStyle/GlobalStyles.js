@@ -30,7 +30,7 @@ export default createGlobalStyle`
     	padding: 0;
     	border: 0;
     	font-size: 100%;
-    	font-family: sans-serif;
+    	font-family: roboto, "open-sans";
     	vertical-align: baseline;
     }
 

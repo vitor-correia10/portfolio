@@ -61,6 +61,10 @@ const Wrapper = styled.div`
 `
 
 const Hamburger = styled.div`
+    position: absolute;
+    left: 10px;
+    padding: 20px;
+    
     @media (min-width: ${THEME.mobile}){
         display: none;
     }
@@ -73,6 +77,7 @@ const LogoAnchor = styled.a`
 
 const Span = styled.span`
     display: none;
+    font-size: 18px;
 
     @media (min-width: ${THEME.mobile}) {
         padding: 10px 2em;
@@ -95,12 +100,14 @@ const Span = styled.span`
         margin-top: 10px;
         background: ${THEME.dark};
         transition: width 500ms ease-out;
+        top: 20px;
     }
 
     &:hover:after{
         text-align: center;
         width: 100%;
         left: 0;
+        top: 20px;
         background: ${THEME.dark};
     }
 `

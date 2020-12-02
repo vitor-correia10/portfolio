@@ -22,8 +22,12 @@ const SocialMedia = () => {
 }
 
 const Social = styled.div`
-    padding: 10px 1.8em;
+    display: none;
 
+    @media (min-width: ${THEME.mobile}){
+        display: block;
+        padding: 10px 1.8em;
+    }
 `
 
 const Anchor = styled.a`

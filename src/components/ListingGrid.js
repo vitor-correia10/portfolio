@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 import { Link } from 'react-router-dom';
+import { THEME } from './GlobalStyle/Theme';
 
 const ListingGrid = ({ itemList }) => {
     return (
@@ -26,10 +27,14 @@ const ListingGrid = ({ itemList }) => {
 };
 
 const Container = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    margin: 40px;
+    margin: 40px 0;
+
+    @media (min-width: ${THEME.mobile}){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        margin: 40px;
+    }
 
     a{
         text-decoration: none;
@@ -55,6 +60,11 @@ const ItemDetails = styled.div`
     position: relative;
     margin: 10px;
     box-shadow: 3px 5px 15px #888888;
+    height: 560px;
+
+    @media (min-width: ${THEME.mobile}){
+        height: auto;
+    }
 `
 
 const Image = styled.img`

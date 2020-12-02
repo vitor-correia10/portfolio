@@ -15,8 +15,8 @@ const Skills = () => {
                 <StyledList>
                     <Row>
                         <List>HTML & CSS</List>
-                        <List>SASS</List>
                         <List>Javascript</List>
+                        <List>Git</List>
                     </Row>
                     <Row>
                         <List>React</List>
@@ -25,8 +25,8 @@ const Skills = () => {
                     </Row>
                     <Row>
                         <List>Node</List>
+                        <List>MongoDB</List>
                         <List>SQL</List>
-                        <List>Git</List>
                     </Row>
                 </StyledList>
             </Container>
@@ -72,6 +72,9 @@ const StyledList = styled.ul`
 `
 
 const Row = styled.p`
+    @media (max-width: ${THEME.mobile}){
+        text-align: center;
+    }
 `
 
 const List = styled.li`
