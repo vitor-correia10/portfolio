@@ -2,9 +2,8 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { Link } from 'react-scroll';
 
-
-import { FiX, FiMenu } from 'react-icons/fi'
 import { THEME } from '../GlobalStyle/Theme';
+import MobileMenu from './MobileMenu';
 
 import Logo from './Logo';
 import SocialMedia from './SocialMedia';
@@ -28,9 +27,7 @@ const Navbar = () => {
 
     return (
         <Wrapper>
-            <Hamburger onClick={handleClick}>
-                {click ? <FiX /> : <FiMenu />}
-            </Hamburger>
+            <MobileMenu />
             <Link to="about" smooth={true} duration={1000} offset={-10}>
                 <Span>About</Span>
             </Link>
@@ -58,16 +55,6 @@ const Wrapper = styled.div`
     align-items: center;
     height: 60px;
     justify-content: center;
-`
-
-const Hamburger = styled.div`
-    position: absolute;
-    left: 10px;
-    padding: 20px;
-
-    @media (min-width: ${THEME.mobile}){
-        display: none;
-    }
 `
 
 const LogoAnchor = styled.a`

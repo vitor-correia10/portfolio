@@ -20,6 +20,11 @@ const About = () => {
 }
 
 const Wrapper = styled.div`
+    @media (max-width: ${THEME.mobile}){
+        margin-top: -5rem;
+        padding-top: 5rem;
+    }
+
     margin: 90px 0 40px 0;
 `
 

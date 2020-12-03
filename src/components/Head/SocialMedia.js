@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { Link } from 'react-scroll';
 
 import { FiGithub, FiLinkedin, FiTwitter, FiX, FiMenu } from 'react-icons/fi'
 import { THEME } from '../GlobalStyle/Theme';
@@ -22,7 +21,9 @@ const SocialMedia = () => {
 }
 
 const Social = styled.div`
-    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
 
     @media (min-width: ${THEME.mobile}){
         display: block;

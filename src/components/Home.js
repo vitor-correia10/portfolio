@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import { THEME } from '../components/GlobalStyle/Theme';
 
 import About from './About';
 import Skills from './Skills';
@@ -18,7 +19,11 @@ const Home = () => {
 }
 
 const Wrapper = styled.div`
-    margin: 0 30px
+    margin: 0 30px;
+
+    @media (max-width: ${THEME.mobile}){
+        padding-top: 5rem;
+    }
 `
 
 export default Home;
