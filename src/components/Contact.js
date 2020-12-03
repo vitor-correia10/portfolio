@@ -31,11 +31,18 @@ const Header = styled.h2`
 const Subtitle = styled.h6`
     margin-bottom: 20px;
     margin-left: 10px;
+    font-size: 18px;
 `
 
 const Paragraph = styled.p`
     margin-bottom: 40px;
-    margin-left: 40px;
+    font-size: 17px;
+    text-align: center;
+
+    @media (min-width: ${THEME.mobile}){
+        margin-left: 40px;
+        text-align: left;
+    }
 `
 
 const Anchor = styled.a`
@@ -43,6 +50,7 @@ const Anchor = styled.a`
     margin-left: 40px;
     border-bottom: 3px solid ${THEME.primary};
     transition: border-bottom 300ms ease-out;
+    font-size: 17px;
 
     &:hover {
         border-bottom: 3px solid transparent;

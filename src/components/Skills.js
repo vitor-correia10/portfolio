@@ -54,11 +54,14 @@ const Container = styled.div`
 const Text = styled.div`
     width: 90%;
     display: block;
-    margin: 20px auto;
     text-align: center;
+    margin: 30px auto 20px auto;
+
 
     @media (min-width: ${THEME.mobile}){
+        margin-top: 0;
         width: 60%;
+        font-size: 17px;
     }
 `
 

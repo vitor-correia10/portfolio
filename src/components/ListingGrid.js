@@ -63,7 +63,7 @@ const ItemDetails = styled.div`
     margin: 10px;
     box-shadow: 3px 5px 15px #888888;
     height: 560px;
-    margin: 30px 0;
+    margin: 40px 0;
 
     @media (min-width: ${THEME.mobile}){
         height: auto;
