@@ -26,8 +26,9 @@ const Social = styled.div`
     top: 20px;
 
     @media (min-width: ${THEME.mobile}){
-        display: block;
+        display: contents;
         padding: 10px 1.8em;
+        top: 0;
     }
 `
 
