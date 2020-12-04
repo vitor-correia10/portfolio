@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import { FiGithub, FiLinkedin, FiTwitter, FiX, FiMenu } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi'
+import { HiOutlineDocumentDownload } from 'react-icons/hi'
 import { THEME } from '../GlobalStyle/Theme';
+import ResumePDF from '../../assets/VitorCorreia-Resume.pdf';
 
 const SocialMedia = () => {
     return (
@@ -16,13 +18,16 @@ const SocialMedia = () => {
             <Anchor href="https://twitter.com/correia10_vitor" target="_blank">
                 <FiTwitter />
             </Anchor>
+            <Anchor href={ResumePDF} target="_blank">
+                <HiOutlineDocumentDownload />
+            </Anchor>
         </Social>
     )
 }
 
 const Social = styled.div`
     position: absolute;
-    right: 20px;
+    right: 12px;
     top: 20px;
 
     @media (min-width: ${THEME.mobile}){
@@ -36,6 +41,9 @@ const Anchor = styled.a`
     padding: 5px;
     font-size: 18px;
 
+    &:last-child{
+        font-size: 21px;
+    }
 
     &:hover{
         color: ${THEME.light};

@@ -4,6 +4,7 @@ import { THEME } from '../components/GlobalStyle/Theme';
 
 import Logo from './Head/Logo';
 import { animateScroll as scroll } from "react-scroll";
+import ResumePDF from '../assets/VitorCorreia-Resume.pdf';
 
 const Footer = () => {
     return (
@@ -23,6 +24,9 @@ const Footer = () => {
                 <Anchor href="https://twitter.com/correia10_vitor" target="_blank">
                     twitter
                 </Anchor>
+                <Anchor href={ResumePDF} target="_blank">
+                    resume
+            </Anchor>
             </div>
         </Wrapper>
     )

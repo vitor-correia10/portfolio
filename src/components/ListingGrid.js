@@ -5,6 +5,9 @@ import { animateScroll as scroll } from "react-scroll";
 import { Link } from 'react-router-dom';
 import { THEME } from './GlobalStyle/Theme';
 
+
+import { FiGithub } from 'react-icons/fi'
+
 const ListingGrid = ({ itemList }) => {
     return (
         <>
@@ -21,8 +24,11 @@ const ListingGrid = ({ itemList }) => {
                             />
                             <ItemName> {item.title}</ItemName>
                             <hr />
-                            <Paragraph> {item.description}</Paragraph>
                         </Link>
+                        <Paragraph> {item.description}</Paragraph>
+                        <GitLink href={item.url} target="_blank">
+                            <FiGithub />
+                        </GitLink>
                     </ItemDetails>
                 ))}
             </Container>
@@ -38,10 +44,6 @@ const Container = styled.div`
         margin: 40px;
     }
 
-    a{
-        text-decoration: none;
-    }
-
     hr{
         width: 30%;
         min-width: 20px;
@@ -51,7 +53,7 @@ const Container = styled.div`
 const Paragraph = styled.p`
     color: gray;
     font-style: italic;
-    padding: 15px;
+    padding: 15px 15px 20px 15px;
 `
 
 const ItemDetails = styled.div`
@@ -64,6 +66,7 @@ const ItemDetails = styled.div`
     box-shadow: 3px 5px 15px #888888;
     height: 560px;
     margin: 40px 0;
+    padding-bottom: 10px;
 
     @media (min-width: ${THEME.mobile}){
         height: auto;
@@ -81,6 +84,14 @@ const Image = styled.img`
     &:hover{
         transform: scale(1.05);
         border: 2px solid #ed7f15;
+    }
+`
+
+const GitLink = styled.a`
+    font-size: 24px;
+
+    &:hover{
+        color: ${THEME.secondary};
     }
 `
 
