@@ -64,7 +64,6 @@ const ItemDetails = styled.div`
     position: relative;
     margin: 10px;
     box-shadow: 3px 5px 15px #888888;
-    height: 560px;
     margin: 40px 0;
     padding-bottom: 10px;
 
