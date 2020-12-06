@@ -14,17 +14,17 @@ const ListingGrid = ({ itemList }) => {
             <Container>
                 {itemList.map((item) => (
                     <ItemDetails key={item.id}>
-                        <Link
+                        {/* <Link
                             to={`${item.id}`}
                             onClick={() => scroll.scrollToTop()}
-                        >
-                            <Image
-                                src={item.avatarSrc}
-                                alt={item.title}
-                            />
-                            <ItemName> {item.title}</ItemName>
-                            <hr />
-                        </Link>
+                        > */}
+                        <Image
+                            src={item.avatarSrc}
+                            alt={item.title}
+                        />
+                        <ItemName> {item.title}</ItemName>
+                        <hr />
+                        {/* </Link> */}
                         <Paragraph> {item.description}</Paragraph>
                         <GitLink href={item.url} target="_blank">
                             <FiGithub />
